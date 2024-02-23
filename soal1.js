@@ -6,20 +6,20 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-rl.question("Masukkan sisi persegi: ", (squareSide) => {
-  var squareSide = parseInt(squareSide);
-  console.info(`Luas persegi jika sisinya ${squareSide} adalah ${moduleSoal1.areaRSquare(squareSide)}`);
-  console.info(`Keliling persegi jika sisinya ${squareSide} adalah ${moduleSoal1.perimeterSquare(squareSide)}`);
+rl.question("Masukkan sisi persegi: ", (sideA) => {
+  var sideA = parseInt(sideA);
+  console.info(`Luas persegi jika sisinya ${sideA} adalah ${moduleSoal1.area(sideA, sideA)}`);
+  console.info(`Keliling persegi jika sisinya ${sideA} adalah ${moduleSoal1.perimeter(sideA,sideA)}`);
 
-  console.info("================================================================================")
+  console.info("================================================================================");
 
-  rl.question("Masukkan panjang persegi panjang: ", (length) => {
-    var length = parseInt(length);
-    rl.question("Masukkan lebar persegi panjang: ", (width) => {
-      var width = parseInt(width);
-      console.info(`Luas persegi jika panjang ${length} dan lebar ${width} adalah ${moduleSoal1.areaRectangle(length,width)}`);
-      console.info(`Keliling persegi jika panjang ${length} dan lebar ${width} adalah ${moduleSoal1.perimeterRectangle(length,width)}`);
+  rl.question("Masukkan panjang persegi panjang: ", (sideA) => {
+    var sideA = parseInt(sideA);
+    rl.question("Masukkan lebar persegi panjang: ", (sideB) => {
+      var sideB = parseInt(sideB);
+      console.info(`Luas persegi panjang jika panjang ${sideA} dan lebar ${sideB} adalah ${moduleSoal1.area(sideA,sideB)}`);
+      console.info(`Keliling persegi panjang jika panjang ${sideA} dan lebar ${sideB} adalah ${moduleSoal1.perimeter(sideA,sideB)}`);
       rl.close();
     });
-  });
+  });  
 });

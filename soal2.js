@@ -66,7 +66,9 @@ source=9.67.116.98:8000] ceased
 fs.writeFile("log.txt", textLog, (err) => {
   if (err) {
     console.error(err);
-  } else {
+    return;
+  } 
     console.info("data berhasil disimpan");
-  }
+    const data = fs.readFileSync('log.txt','utf-8');
+    console.info(`data nya adalah \n${data}`);
 });
